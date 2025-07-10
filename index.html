@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAIKH MOHAMMADJUNED J. | Civil Engineer</title>
+    <style>
+        :root {
+            --primary: #2a5f8a;
+            --secondary: #f7a440;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #28a745;
+            --info: #17a2b8;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), #1a3a5a);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        header p {
+            margin: 0.8rem 0 0;
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: 300;
+        }
+        .contact-bar {
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 1rem 0;
+            text-align: center;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .contact-bar a {
+            color: var(--dark);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .contact-bar a:hover {
+            color: white;
+            text-decoration: none;
+        }
+        .contact-bar i {
+            margin-right: 5px;
+            color: var(--primary);
+        }
+        .section {
+            padding: 4rem 0;
+        }
+        .section-title {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+        .section-title:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        .personal-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--secondary);
+        }
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .info-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            font-weight: 600;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem;
+            margin-bottom: 0.8rem;
+        }
+        .info-label {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        .education-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .education-table th, .education-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .education-table th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 500;
+        }
+        .education-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .education-table tr:hover {
+            background-color: #f1f5f9;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .skill-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex: 1 1 300px;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--info);
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .skill-item h4 {
+            margin-top: 0;
+            color: var(--primary);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            font-weight: 600;
+        }
+        .skill-item ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        .skill-item li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        .skill-item li:before {
+            content: "▹";
+            position: absolute;
+            left: -15px;
+            color: var(--secondary);
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--success);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .project-header {
+            background: linear-gradient(135deg, var(--primary), #1a3a5a);
+            color: white;
+            padding: 1.2rem;
+        }
+        .project-header h3 {
+            margin: 0;
+            font-weight: 600;
+        }
+        .project-body {
+            padding: 1.8rem;
+        }
+        .project-detail {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        .project-detail span {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .reference-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .reference-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--accent);
+        }
+        .reference-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .reference-card h4 {
+            margin-top: 0;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .reference-card p {
+            margin-bottom: 0.8rem;
+        }
+        .reference-card strong {
+            color: var(--dark);
+        }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), #c0392b);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+            color: white;
+        }
+        .download-btn i {
+            margin-right: 8px;
+        }
+        footer {
+            background: linear-gradient(135deg, var(--dark), #1a1a1a);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 3rem;
+        }
+        footer p {
+            margin: 0.5rem 0;
+            opacity: 0.8;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1000px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            position: relative;
+            animation: modalopen 0.4s;
+        }
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        .close {
+            color: #aaa;
+            position: absolute;
+            right: 25px;
+            top: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .close:hover {
+            color: var(--accent);
+        }
+        .all-projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        @media (max-width: 992px) {
+            .all-projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            header p {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .personal-info, .project-grid, .reference-grid, .all-projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .modal-content {
+                width: 90%;
+                margin: 10% auto;
+                padding: 20px;
+            }
+            .contact-bar a {
+                display: block;
+                margin: 5px 0;
+            }
+        }
+        @media (max-width: 576px) {
+            .modal-content {
+                width: 95%;
+                margin: 15% auto;
+            }
+            .all-projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SHAIKH MOHAMMADJUNED J.</h1>
+            <p>Civil Engineer | Project Manager | 13+ Years Experience</p>
+        </div>
+    </header>
+    
+    <div class="contact-bar">
+        <div class="container">
+            <a href="tel:+919998880038"><i class="fas fa-phone"></i> +91 9998880038</a>
+            <a href="mailto:shaikh.juned279@gmail.com"><i class="fas fa-envelope"></i> shaikh.juned279@gmail.com</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Ahmedabad, Gujarat</a>
+        </div>
+    </div>
+    
+    <section class="section" id="personal">
+        <div class="container">
+            <h2 class="section-title">Personal Information</h2>
+            <div class="personal-info">
+                <div class="info-card">
+                    <h3>Basic Details</h3>
+                    <div class="info-grid">
+                        <div class="info-label">Date of Birth:</div>
+                        <div>27/09/1989</div>
+                        <div class="info-label">Gender:</div>
+                        <div>Male</div>
+                        <div class="info-label">Marital Status:</div>
+                        <div>Married</div>
+                        <div class="info-label">Nationality:</div>
+                        <div>Indian</div>
+                        <div class="info-label">Languages:</div>
+                        <div>Hindi, English, Gujarati, Urdu</div>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <h3>Contact Information</h3>
+                    <div class="info-grid">
+                        <div class="info-label">Address:</div>
+                        <div>
+                            1, State Bank Society,<br>
+                            Juhapura, Sarkhej Road,<br>
+                            Ahmedabad, Gujarat - 380055
+                        </div>
+                        <div class="info-label">Mobile:</div>
+                        <div>+91 9998880038</div>
+                        <div class="info-label">Email:</div>
+                        <div>shaikh.juned279@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="education">
+        <div class="container">
+            <h2 class="section-title">Education Qualification</h2>
+            <table class="education-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Qualification</th>
+                        <th>Institute</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2012</td>
+                        <td>Bachelor of Engineering (Civil Engineering)</td>
+                        <td>C. K. Pithawala College Of Engineering & Technology, Surat</td>
+                        <td>7.43 CGPA (Distinction)</td>
+                    </tr>
+                    <tr>
+                        <td>2007</td>
+                        <td>HSC (12th Standard)</td>
+                        <td>F.D. High School, Ahmedabad</td>
+                        <td>57.00%</td>
+                    </tr>
+                    <tr>
+                        <td>2005</td>
+                        <td>SSC (10th Standard)</td>
+                        <td>F.D. High School, Ahmedabad</td>
+                        <td>63.43%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title">Professional Skills</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li>Strong understanding of engineering drawings, codes, and specifications</li>
+                        <li>Project scheduling and Time management</li>
+                        <li>Target oriented execution</li>
+                        <li>Work flow planning</li>
+                        <li>Design review & Drawing verification</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h4>Management Skills</h4>
+                    <ul>
+                        <li>Quality control & Assurance</li>
+                        <li>Budgeting and cost control</li>
+                        <li>Interior project execution</li>
+                        <li>Estimation, costing, billing, BOQ & BBS</li>
+                        <li>Manpower and material planning</li>
+                    </ul>
+                </div>
+                <div class="skill-item">
+                    <h4>Software Skills</h4>
+                    <ul>
+                        <li>MS Office (Word, PowerPoint, Excel, Project)</li>
+                        <li>AutoCAD</li>
+                        <li>ETABS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>NEELKANTH ELEGANCE</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> DHARMADEV INFRASTRUCTURE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential – High Rise (11 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 174 Flats</div>
+                        <div class="project-detail"><span>Work:</span> Finishing, Possession & Common Development</div>
+                        <div class="project-detail"><span>Duration:</span> June 2012 - May 2013</div>
+                        <div class="project-detail"><span>Role:</span> Project Incharge</div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ARYAAN OPULANCE</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> UNICON ENGINEERS</div>
+                        <div class="project-detail"><span>Type:</span> Residential High Rise (22 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 80</div>
+                        <div class="project-detail"><span>Work:</span> Whole R.C.C including Foundation & Excavation</div>
+                        <div class="project-detail"><span>Duration:</span> April 2014 - December 2016</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager (On behalf of Contractor)</div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AAVAAS BY NEBULA</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> NEBULA INFRASPACE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential Low Cost Housing Township</div>
+                        <div class="project-detail"><span>Units:</span> 3000</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> April 2017 - February 2019</div>
+                        <div class="project-detail"><span>Role:</span> Assistant Project Manager</div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>WEST RIDGE BY PACIFICA</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> NEBULA INFRASPACE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential Luxurious Villas</div>
+                        <div class="project-detail"><span>Units:</span> 23</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> June 2020 - May 2021</div>
+                        <div class="project-detail"><span>Role:</span> Project Incharge</div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SWATI SENOR</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> SWATI SANDHYA PROCON</div>
+                        <div class="project-detail"><span>Type:</span> Residential (22 Storey 5BHK Ultra Luxurious Apartments)</div>
+                        <div class="project-detail"><span>Units:</span> 54</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> June 2022 - Present</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager</div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SWATI CORPORATE HOUSE</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> SWATI SANDHYA PROCON</div>
+                        <div class="project-detail"><span>Type:</span> Office Building</div>
+                        <div class="project-detail"><span>Units:</span> 1</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> February 2024 - Present</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager</div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container">
+                <a href="#all-projects" class="download-btn" id="view-all-btn">View All 16 Projects</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- All Projects Modal -->
+    <div id="all-projects-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="section-title">All 16 Projects</h2>
+            <div class="all-projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>NEELKANTH ELEGANCE</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> DHARMADEV INFRASTRUCTURE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential – High Rise (11 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 174 Flats</div>
+                        <div class="project-detail"><span>Work:</span> Finishing, Possession & Common Development</div>
+                        <div class="project-detail"><span>Duration:</span> June 2012 - May 2013</div>
+                        <div class="project-detail"><span>Role:</span> Project Incharge</div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SWAMINARAYAN CASTLE 1</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> DHARMADEV INFRASTRUCTURE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential – Low Rise (5 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 248 Flats</div>
+                        <div class="project-detail"><span>Work:</span> Finishing, Possession & Common Development</div>
+                        <div class="project-detail"><span>Duration:</span> May 2013 - Aug 2013</div>
+                        <div class="project-detail"><span>Role:</span> Sr. Site Engineer</div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SWAMINARAYAN CASTLE 2</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> DHARMADEV INFRASTRUCTURE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential – Low Rise (5 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 180 Flats</div>
+                        <div class="project-detail"><span>Work:</span> Masonry, Plaster, Flooring, Water-proofing, Plumbing & Electric Work</div>
+                        <div class="project-detail"><span>Duration:</span> Aug 2013 - Nov 2013</div>
+                        <div class="project-detail"><span>Role:</span> Sr. Site Engineer</div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SWAMINARAYAN PARK 2</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> DHARMADEV INFRASTRUCTURE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential – High Rise (10 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 400 Flats</div>
+                        <div class="project-detail"><span>Work:</span> Masonry, Plaster, Flooring, Water-proofing, Plumbing & Electric Work</div>
+                        <div class="project-detail"><span>Duration:</span> Nov 2013 - April 2014</div>
+                        <div class="project-detail"><span>Role:</span> Sr. Site Engineer</div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SWAMINARAYAN PARK 4</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> DHARMADEV INFRASTRUCTURE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential (7 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 252 Flats</div>
+                        <div class="project-detail"><span>Work:</span> Excavation & Foundation up to Tie Beam</div>
+                        <div class="project-detail"><span>Duration:</span> Dec 2013 - April 2014</div>
+                        <div class="project-detail"><span>Role:</span> Sr. Site Engineer</div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ARYAAN OPULANCE</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> UNICON ENGINEERS</div>
+                        <div class="project-detail"><span>Type:</span> Residential High Rise (22 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 80</div>
+                        <div class="project-detail"><span>Work:</span> Whole R.C.C including Foundation & Excavation</div>
+                        <div class="project-detail"><span>Duration:</span> April 2014 - December 2016</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager (On behalf of Contractor)</div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>VERANTES 22</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> UNICON ENGINEERS</div>
+                        <div class="project-detail"><span>Type:</span> Residential High Rise (12 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 22</div>
+                        <div class="project-detail"><span>Work:</span> Earth Retention (Pile)</div>
+                        <div class="project-detail"><span>Duration:</span> April 2015 - June 2015</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager (On behalf of Contractor)</div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SHAH RESIDENCY</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> UNICON ENGINEERS</div>
+                        <div class="project-detail"><span>Type:</span> Private Bungalow (2 Storey 3000SQM)</div>
+                        <div class="project-detail"><span>Units:</span> 1</div>
+                        <div class="project-detail"><span>Work:</span> RCC, Masonry & Plaster</div>
+                        <div class="project-detail"><span>Duration:</span> May 2016 - April 2017</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager (On behalf of Contractor)</div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>ANERIS VILLA</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> UNICON ENGINEERS</div>
+                        <div class="project-detail"><span>Type:</span> Private Bungalow (5000 SQM)</div>
+                        <div class="project-detail"><span>Units:</span> 1</div>
+                        <div class="project-detail"><span>Work:</span> RCC, Masonry & Plaster</div>
+                        <div class="project-detail"><span>Duration:</span> Aug 2016 - April 2017</div>
+                        <div class="project-detail"><span>Role:</span> Coordinator (On behalf of Contractor)</div>
+                    </div>
+                </div>
+                
+                <!-- Project 10 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AAVAAS BY NEBULA (AHMEDABAD)</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> NEBULA INFRASPACE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential Low Cost Housing Township</div>
+                        <div class="project-detail"><span>Units:</span> 3000</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> April 2017 - Feb 2019</div>
+                        <div class="project-detail"><span>Role:</span> Assistant Project Manager</div>
+                    </div>
+                </div>
+                
+                <!-- Project 11 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>AAVAAS BY NEBULA (SANAND)</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> NEBULA INFRASPACE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Project Office and Sample Unit</div>
+                        <div class="project-detail"><span>Units:</span> 1</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> February 2018 - Dec 2019</div>
+                        <div class="project-detail"><span>Role:</span> Project Incharge</div>
+                    </div>
+                </div>
+                
+                <!-- Project 12 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>OWNERS BUNGALOW</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> NEBULA INFRASPACE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Renovation and Extension</div>
+                        <div class="project-detail"><span>Units:</span> 1</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> Dec 2019 - June 2020</div>
+                        <div class="project-detail"><span>Role:</span> Project Incharge</div>
+                    </div>
+                </div>
+                
+                <!-- Project 13 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>WEST RIDGE BY PACIFICA</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> NEBULA INFRASPACE LLP.</div>
+                        <div class="project-detail"><span>Type:</span> Residential Luxurious Villas</div>
+                        <div class="project-detail"><span>Units:</span> 23</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> June 2020 - May 2021</div>
+                        <div class="project-detail"><span>Role:</span> Project Incharge</div>
+                    </div>
+                </div>
+                
+                <!-- Project 14 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SURYAKAMAL APARTMENTS</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> JAYSHREE ASSOCIATES</div>
+                        <div class="project-detail"><span>Type:</span> Residential (7 Storey)</div>
+                        <div class="project-detail"><span>Units:</span> 56</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> May 2021 - May 2022</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager</div>
+                    </div>
+                </div>
+                
+                <!-- Project 15 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SWATI SENOR</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> SWATI SANDHYA PROCON</div>
+                        <div class="project-detail"><span>Type:</span> Residential (22 Storey 5BHK Ultra Luxurious Apartments)</div>
+                        <div class="project-detail"><span>Units:</span> 54</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> June 2022 - Present</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager</div>
+                    </div>
+                </div>
+                
+                <!-- Project 16 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>SWATI CORPORATE HOUSE</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-detail"><span>Employer:</span> SWATI SANDHYA PROCON</div>
+                        <div class="project-detail"><span>Type:</span> Office Building</div>
+                        <div class="project-detail"><span>Units:</span> 1</div>
+                        <div class="project-detail"><span>Work:</span> Overall Work</div>
+                        <div class="project-detail"><span>Duration:</span> February 2024 - Present</div>
+                        <div class="project-detail"><span>Role:</span> Project Manager</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="section" id="references">
+        <div class="container">
+            <h2 class="section-title">Professional References</h2>
+            <div class="reference-grid">
+                <div class="reference-card">
+                    <h4>Mr. Atul Desai</h4>
+                    <p><strong>Position:</strong> Former Chief Engineer at DHARMADEV Infra. Ltd.</p>
+                    <p><strong>Contact:</strong> +91 9712646078</p>
+                </div>
+                <div class="reference-card">
+                    <h4>Mr. Bipin Shah (CEPT Uni.)</h4>
+                    <p><strong>Position:</strong> Project Manager at DHARMADEV Infra. Ltd.</p>
+                    <p><strong>Contact:</strong> +91 9227203388</p>
+                </div>
+                <div class="reference-card">
+                    <h4>Mr. Devang Soni</h4>
+                    <p><strong>Position:</strong> Partner of UNICON ENGINEERS</p>
+                    <p><strong>Contact:</strong> +91 9825577153</p>
+                </div>
+                <div class="reference-card">
+                    <h4>Mr. Manan Shah</h4>
+                    <p><strong>Position:</strong> Partner of AARYAN BUILTSPACE LLP</p>
+                    <p><strong>Contact:</strong> +91 9909970790</p>
+                </div>
+                <div class="reference-card">
+                    <h4>Mr. Masood Khan</h4>
+                    <p><strong>Position:</strong> Founding Partner of Nebula infraspace LLP</p>
+                    <p><strong>Contact:</strong> +91 9638665444</p>
+                </div>
+                <div class="reference-card">
+                    <h4>Mr. Pravin Chotaliya</h4>
+                    <p><strong>Position:</strong> Owner Jayshree associates</p>
+                    <p><strong>Contact:</strong> +91 9825006370</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="download">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">Download Resume</h2>
+            <a href="Resume_4_1 (1).docx" class="download-btn" download>
+                <i class="fas fa-download"></i> Download Full Resume (DOCX)
+            </a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SHAIKH MOHAMMADJUNED J. | Civil Engineer</p>
+            <p>Contact: +91 9998880038 | shaikh.juned279@gmail.com</p>
+        </div>
+    </footer>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Modal functionality
+        const modal = document.getElementById("all-projects-modal");
+        const btn = document.getElementById("view-all-btn");
+        const span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function() {
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+        
+        span.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+</body>
+</html>
